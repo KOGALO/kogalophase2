@@ -13,8 +13,9 @@
     "json-server": "^0.15.1"
   },
   "scripts": {
-    "start": "PORT=8000 react-scripts start",
-    "server": "json-server --watch db.json -p 8002"
+    "start": "PORT=8000 react-scripts --openssl-legacy-provider start",
+    "server": "json-server --watch db.json -p 8002",
+    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
